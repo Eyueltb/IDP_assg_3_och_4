@@ -36,21 +36,48 @@ public class Program
 {
     static void Main(string[] args)
     {
-        printTimeForLightToReachEarth();
-        printInverseSqure();
+        Assignment3();
+        Assignment4();
+    }
+    private static void Assignment3()
+    {
+        PrintGrundamne();
+    }
+
+    private static void PrintGrundamne() 
+    {
+        Grundamne syre = new("Syre", 8, "Icke-metall", 54.36, 90.188);
+        Grundamne järn = new("Järn", 26, "Metall", 1811, 3134);
+        Grundamne guld = new("Guld", 79, "Metall", 1337.33, 3243);
+
+        Grundamne[] grundamnen = { syre, järn, guld };
+
+        foreach (Grundamne grundämne in grundamnen)
+        {
+            grundämne.Print();
+            Console.WriteLine();
+        }
+
+        Console.ReadKey();
+    }
+    private static void Assignment4()
+    {
+        PrintTimeForLightToReachEarth();
+        PrintInverseSqure();
         PrintSumAllEvenNumbersBetweenTwoNumbers();
         PrintShiftArray();
         PrintInverseSum();
         PrintSpecies();
+
     }
-    private static void printTimeForLightToReachEarth()
+    private static void PrintTimeForLightToReachEarth()
     {
         const double lightSpeed = 299792.458; // speed of light in km/s
         const double sunDistance = 149598023; // distance of the sun in km
         Assignment.CalculateTimeForLightToReachEarth(lightSpeed, sunDistance);
     }
 
-    private static void printInverseSqure()
+    private static void PrintInverseSqure()
     {
         double[] values = { 2, 3, 4, 5 };
         foreach (double value in values)
