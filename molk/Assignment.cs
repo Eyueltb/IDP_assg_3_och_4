@@ -164,10 +164,6 @@ namespace molk
         }
     }
 
-    class Entry
-    {
-       
-    }
 }
 
 
