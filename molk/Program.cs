@@ -42,6 +42,7 @@ public class Program
     private static void Assignment3()
     {
         PrintGrundamne();
+        PrintSolution4();
     }
 
     private static void PrintGrundamne() 
@@ -59,6 +60,24 @@ public class Program
         }
 
         Console.ReadKey();
+    }
+
+    private static void PrintSolution4() 
+    {
+        Grundamne[] grundämnen = new Grundamne[6];
+
+        grundämnen[0] = new("syre", 8, "ickemetall", 54.6, 90.188);
+        grundämnen[1] = new("järn", 26, "metall", 1811, 3134);
+        grundämnen[2] = new("guld", 79, "metall", 1337.33, 3129);
+        grundämnen[3] = new("väte", 1, "ickemetall", 13.99, 20.271);
+        grundämnen[4] = new("brom", 35, "ickemetall", 265.8, 332.0);
+        grundämnen[5] = new("kvicksilver", 80, "metall", 234.3210, 629.88);
+
+        foreach (Grundamne grundämne in grundämnen)
+        {
+            grundämne.Print();
+            Console.WriteLine();
+        }
     }
     private static void Assignment4()
     {
